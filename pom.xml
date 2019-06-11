@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>be.vdab</groupId>
-	<artifactId>groeneten</artifactId>
+	<artifactId>groenetenen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>groeneten</name>
+	<name>groenetenen</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
