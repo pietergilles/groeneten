@@ -38,11 +38,15 @@ public class Filiaal implements Serializable {
     private Adres adres;
     @Version
     private long versie;
-    // Je maakt getters voor naam, hoofdFiliaal, waardeGebouw, inGebruiName, adres
+    // Je maakt getters voor id, naam, hoofdFiliaal, waardeGebouw, inGebruiName, adres
     @OneToMany(mappedBy = "filiaal")
     private Set<Werknemer> werknemers;
     public Set<Werknemer> getWerknemers() {
         return Collections.unmodifiableSet(werknemers);
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getNaam() {
