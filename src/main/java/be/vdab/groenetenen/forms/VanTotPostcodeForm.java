@@ -10,14 +10,15 @@ import javax.validation.constraints.NotNull;
 @VanTotPostcodeFormVanKleinerDanOfGelijkAanTot
 public class VanTotPostcodeForm {
     @NotNull
-    @Range(min = 1000, max = 9999)
+    @Postcode
     private final Integer van;
     @NotNull
     @Postcode
     private final Integer tot;
 // je maakt een geparametriseerde constructor en getters
 
-    public VanTotPostcodeForm(@NotNull @Range(min = 1000, max = 9999) Integer van, @NotNull @Range(min = 1000, max = 9999) Integer tot) {
+
+    public VanTotPostcodeForm(@NotNull Integer van, @NotNull Integer tot) {
         this.van = van;
         this.tot = tot;
     }

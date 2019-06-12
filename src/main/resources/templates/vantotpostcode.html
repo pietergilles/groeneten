@@ -17,7 +17,7 @@
     </label>
     <input type="submit" value="Zoeken">
     <div th:if="${#fields.hasGlobalErrors()}">
-        <div class="fout" th:each="err : ${#fields.globalErrors()}" 
+        <div class="fout" th:each="err : ${#fields.globalErrors()}"
              th:text="${err}"></div>
     </div>
 </form>
