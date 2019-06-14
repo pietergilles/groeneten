@@ -65,7 +65,8 @@ class FiliaalRestController {
         StringBuilder fouten = new StringBuilder();
         ex.getBindingResult().getFieldErrors().forEach(error ->
                 fouten.append(error.getField()).append(':')
-                .append(error.getDefaultMessage()).append('\n'));
+                .append(error.getDefaultMessage()
+                ).append('\n'));
         fouten.deleteCharAt(fouten.length() - 1);
         return fouten.toString();
     }
