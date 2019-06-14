@@ -43,4 +43,8 @@ class FiliaalController {
         optionalFiliaal.ifPresent(filiaal -> modelAndView.addObject(filiaal));
         return modelAndView;
     }
+    @GetMapping("perid")
+    String findById() {
+        return "filiaalPerId";
+    }
 }
