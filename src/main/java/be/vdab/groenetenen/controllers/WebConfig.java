@@ -17,7 +17,7 @@ class WebConfig implements WebMvcConfigurer
     @Bean
     CookieLocaleResolver localeResolver() {
         CookieLocaleResolver resolver = new CookieLocaleResolver();
-        resolver.setCookieMaxAge(604_800); 
+        resolver.setCookieMaxAge(604_800);
         return resolver;
     }
     @Override

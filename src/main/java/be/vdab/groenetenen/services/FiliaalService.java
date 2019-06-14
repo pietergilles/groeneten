@@ -7,4 +7,8 @@ import java.util.List;
 // enkele imports
 public interface FiliaalService {
     List<Filiaal> findByPostcode(int van, int tot);
+    void delete(Filiaal filiaal);
+    void create(Filiaal filiaal);
+    void update(Filiaal filiaal);
+    List<Filiaal> findAll();
 }
