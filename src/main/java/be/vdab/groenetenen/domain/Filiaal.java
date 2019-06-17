@@ -82,4 +82,7 @@ public class Filiaal implements Serializable {
     public Adres getAdres() {
         return adres;
     }
+    public void afschrijven() {
+        waardeGebouw = BigDecimal.ZERO;
+    }
 }

@@ -9,8 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.Optional;
@@ -46,5 +48,12 @@ class FiliaalController {
     @GetMapping("perid")
     String findById() {
         return "filiaalPerId";
+    }
+    private static final String REDIRECT_NA_AFSCHRIJVEN = "redirect:/filialen/{id}";
+    @PostMapping("{id}/afschrijven")
+    String afschrijven(@PathVariable long id, RedirectAttributes redirectAttributes){
+        filiaalService.afschrijven(id);
+        redirectAttributes.addAttribute("id", id);
+        return REDIRECT_NA_AFSCHRIJVEN;
     }
 }

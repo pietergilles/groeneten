@@ -11,4 +11,5 @@ public interface FiliaalService {
     void create(Filiaal filiaal);
     void update(Filiaal filiaal);
     List<Filiaal> findAll();
+    void afschrijven(long id);
 }
