@@ -27,7 +27,6 @@ class DefaultMailSender implements MailSender {
         this.emailAdresWebMaster = emailAdresWebMaster;
     }
     @Override
-    @Async
     public void nieuweOfferte(Offerte offerte, String offertesURL) {
         try {
             MimeMessage message = sender.createMimeMessage();
